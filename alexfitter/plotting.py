@@ -39,8 +39,8 @@ from astropy.time import Time
 from datetime import date
 
 #::: local imports
-from allesfitter.inout import read_csv
-from allesfitter.time_series import sigma_clip, slide_clip
+from alexfitter.inout import read_csv
+from alexfitter.time_series import sigma_clip, slide_clip
 
 #::: plotting settings
 import seaborn as sns

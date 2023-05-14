@@ -35,8 +35,8 @@ from astropy import units as u
 from astropy.coordinates import SkyCoord
 
 #::: my modules
-import allesfitter
-from allesfitter import config
+import alexfitter
+from alexfitter import config
 
 
 
@@ -79,7 +79,7 @@ def convert_many_points_to_an_area(lons, lats, sizes, brightnesses):
 
 def plot_spots_new(datadir):
     
-    alles = allesfitter.allesclass(datadir)
+    alles = alexfitter.allesclass(datadir)
     
     for inst in alles.BASEMENT.settings['inst_phot']:
         fig = plt.figure()
@@ -144,7 +144,7 @@ def plot_publication_spots_from_posteriors(datadir, Nsamples=20, command='save',
     fig, ax1, ax2, ax3 = setup_grid()
         
     config.init(datadir)
-    posterior_samples = allesfitter.get_ns_posterior_samples(datadir, Nsamples=Nsamples, as_type='2d_array')
+    posterior_samples = alexfitter.get_ns_posterior_samples(datadir, Nsamples=Nsamples, as_type='2d_array')
     
     for inst in config.BASEMENT.settings['inst_all']:
         if config.BASEMENT.settings['host_N_spots_'+inst] > 0:
@@ -156,7 +156,7 @@ def plot_publication_spots_from_posteriors(datadir, Nsamples=20, command='save',
 
             for i_sample, sample in tqdm(enumerate(posterior_samples)):
             
-                params = allesfitter.computer.update_params(sample)
+                params = alexfitter.computer.update_params(sample)
                     
                 spots = [ [params['host_spot_'+str(i)+'_long_'+inst] for i in range(1,config.BASEMENT.settings['host_N_spots_'+inst]+1) ],
                           [params['host_spot_'+str(i)+'_lat_'+inst] for i in range(1,config.BASEMENT.settings['host_N_spots_'+inst]+1) ],
@@ -164,11 +164,11 @@ def plot_publication_spots_from_posteriors(datadir, Nsamples=20, command='save',
                           [params['host_spot_'+str(i)+'_brightness_'+inst] for i in range(1,config.BASEMENT.settings['host_N_spots_'+inst]+1) ] ]  
     
     
-                model = allesfitter.computer.calculate_model(params, inst, 'flux')
-                baseline = allesfitter.computer.calculate_baseline(params, inst, 'flux')
+                model = alexfitter.computer.calculate_model(params, inst, 'flux')
+                baseline = alexfitter.computer.calculate_baseline(params, inst, 'flux')
 
-                model_xx = allesfitter.computer.calculate_model(params, inst, 'flux', xx=xx) #evaluated on xx (!)
-                baseline_xx = allesfitter.computer.calculate_baseline(params, inst, 'flux', xx=xx) #evaluated on xx (!)
+                model_xx = alexfitter.computer.calculate_model(params, inst, 'flux', xx=xx) #evaluated on xx (!)
+                baseline_xx = alexfitter.computer.calculate_baseline(params, inst, 'flux', xx=xx) #evaluated on xx (!)
     
                 if i_sample==0:
                     if mode=='default':
@@ -320,7 +320,7 @@ def plot_spots_from_posteriors(datadir, Nsamples=10, command='save'):
         
         
     config.init(datadir)
-    posterior_samples_dic = allesfitter.get_ns_posterior_samples(datadir, Nsamples=Nsamples)
+    posterior_samples_dic = alexfitter.get_ns_posterior_samples(datadir, Nsamples=Nsamples)
     
     for sample in tqdm(range(Nsamples)):
     

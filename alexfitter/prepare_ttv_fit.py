@@ -35,10 +35,10 @@ except ImportError:
     pass
 
 #::: my modules
-import allesfitter
-from allesfitter.lightcurves import eclipse_width_smart
-from allesfitter.exoworlds_rdx.lightcurves.index_transits import index_transits, get_tmid_observed_transits
-from allesfitter.plotting import fullplot, brokenplot, chunkplot, monthplot, tessplot
+import alexfitter
+from alexfitter.lightcurves import eclipse_width_smart
+from alexfitter.exoworlds_rdx.lightcurves.index_transits import index_transits, get_tmid_observed_transits
+from alexfitter.plotting import fullplot, brokenplot, chunkplot, monthplot, tessplot
 
 
     
@@ -71,7 +71,7 @@ def prepare_ttv_fit(datadir, style='fullplot', max_transits=20):
     #----------------------------------------------------------------------
     #::: setup
     #----------------------------------------------------------------------
-    alles = allesfitter.allesclass(datadir)
+    alles = alexfitter.allesclass(datadir)
     window = alles.settings['fast_fit_width']
     # colors = plt.rcParams["axes.prop_cycle"].by_key()["color"] #the default sequence of plot colors (for the companions)
     if not os.path.exists( os.path.join(datadir,'ttv_preparation') ): os.makedirs(os.path.join(datadir,'ttv_preparation'))

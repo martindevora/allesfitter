@@ -40,9 +40,9 @@ except:
 from itertools import cycle
 
 #::: allesfitter codes
-from allesfitter import config
-from allesfitter.exoworlds_rdx.lightcurves.index_transits import get_first_epoch
-from allesfitter.exoworlds_rdx.lightcurves.lightcurve_tools import calc_phase
+from alexfitter import config
+from alexfitter.exoworlds_rdx.lightcurves.index_transits import get_first_epoch
+from alexfitter.exoworlds_rdx.lightcurves.lightcurve_tools import calc_phase
 
 
 
