@@ -1,6 +1,6 @@
-include allesfitter/GUI.ipynb
-include allesfitter/LOGO_circ.png
-graft allesfitter
+include alexfitter/GUI.ipynb
+include alexfitter/LOGO_circ.png
+graft alexfitter
 exclude build/
 exclude dist/
 exclude paper/
