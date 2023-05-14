@@ -21,9 +21,9 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name = 'allesfitter',
+    name = 'alexfitter',
     packages = find_packages(),
-    version = '1.2.10',
+    version = '1.2.11',
     description = 'A global inference framework for photometry and RV',
     author = 'Maximilian N. Günther & Tansu Daylan',
     author_email = 'maximilian.guenther@esa.int',
