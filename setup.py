@@ -3,7 +3,7 @@
 """
 Created on Wed Jan 23 11:40:38 2019
 
-version = ""
+version = "1.2.13"
 Dr. Maximilian N. Günther
 European Space Agency (ESA)
 European Space Research and Technology Centre (ESTEC)
