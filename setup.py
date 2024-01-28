@@ -3,7 +3,7 @@
 """
 Created on Wed Jan 23 11:40:38 2019
 
-@author:
+version = ""
 Dr. Maximilian N. Günther
 European Space Agency (ESA)
 European Space Research and Technology Centre (ESTEC)
