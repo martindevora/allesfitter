@@ -1,10 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-version = "1.2.14"
-
-version = "1.2.13"
-Dr. Maximilian N. Günther
+version = 1.2.13
 European Space Agency (ESA)
 European Space Research and Technology Centre (ESTEC)
 Keplerlaan 1, 2201 AZ Noordwijk, The Netherlands
@@ -23,7 +20,7 @@ from setuptools import setup, find_packages
 setup(
     name = 'alexfitter',
     packages = find_packages(),
-    version = '1.2.12',
+version = "1.2.15",
     description = 'A global inference framework for photometry and RV',
     author = 'Maximilian N. Günther & Tansu Daylan',
     author_email = 'maximilian.guenther@esa.int',
