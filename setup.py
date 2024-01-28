@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jan 23 11:40:38 2019
+version = "1.2.14"
 
 version = "1.2.13"
 Dr. Maximilian N. Günther
